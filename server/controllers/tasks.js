@@ -1,4 +1,4 @@
-var Task  = require('../models/task.js')();
+var Task  = require('../models/task.js');
 // const mongoose = require('mongoose');
 // var User = mongoose.model('User');
 module.exports = {
@@ -49,7 +49,7 @@ module.exports = {
             'document':req.body.description,
             'completed':req.body.completed
         }
-        Tasks.updateOne({_id:req.params.id},updatedInfo,function(err,data){
+        Task.updateOne({_id:req.params.id},updatedInfo,function(err,data){
             if(err)
             {
                 console.log("I failed.");
